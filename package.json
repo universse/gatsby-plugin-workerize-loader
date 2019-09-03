@@ -1,0 +1,23 @@
+{
+  "name": "gatsby-plugin-workerize-loader",
+  "author": "Phuoc <phuoc317049@gmail.com>",
+  "version": "1.0.0",
+  "description": "Integrate workerize-loader with GatsbyJS",
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "worker",
+    "web worker",
+    "workerize",
+    "workerize-loader",
+    "threads",
+    "webpack"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "gatsby": "^2.0.0"
+  },
+  "dependencies": {
+    "workerize-loader": "^1.1.0"
+  }
+}
