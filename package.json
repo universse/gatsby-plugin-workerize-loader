@@ -3,6 +3,12 @@
   "author": "Phuoc <phuoc317049@gmail.com>",
   "version": "1.0.0",
   "description": "Integrate workerize-loader with GatsbyJS",
+  "license": "MIT",
+  "homepage": "https://github.com/universse/gatsby-plugin-workerize-loader",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/universse/gatsby-plugin-workerize-loader"
+  },
   "keywords": [
     "gatsby",
     "gatsby-plugin",
@@ -13,7 +19,6 @@
     "threads",
     "webpack"
   ],
-  "license": "MIT",
   "peerDependencies": {
     "gatsby": "^2.0.0"
   },
