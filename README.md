@@ -111,7 +111,7 @@ export default function getSearchWorker() {
 
 ```js
 // anywhere.js
-import getSearchWorker from "path/to/search.worker.js";
+import getSearchWorker from "path/to/getSearchWorker.js";
 
 function someOperation (searchInput) {
   getSearchWorker().search(searchInput).then(
