@@ -67,7 +67,7 @@ function SearchComponent() {
 
 ### Lazy initialization
 
-Worker code is only downloaded and parsed when you _first_ instantiate Worker i.e. `new Worker()`. Automatic code-splitting 🔥🔥🔥.
+Worker code is only downloaded and parsed when you **first** instantiate Worker i.e. `new Worker()`. Automatic code-splitting 🔥🔥🔥.
 
 #### With [useRef](https://reactjs.org/docs/hooks-faq.html#how-to-create-expensive-objects-lazily) within a component.
 
