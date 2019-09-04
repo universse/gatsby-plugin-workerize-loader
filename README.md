@@ -8,13 +8,13 @@ via [workerize-loader](https://github.com/developit/workerize-loader).
 With Yarn:
 
 ```bash
-yarn add gatsby-plugin-workerize-loader
+yarn add gatsby-plugin-workerize-loader -D
 ```
 
 Or with npm:
 
 ```bash
-npm install --save gatsby-plugin-workerize-loader
+npm install --save-dev gatsby-plugin-workerize-loader
 ```
 
 ## Usage
@@ -22,7 +22,7 @@ npm install --save gatsby-plugin-workerize-loader
 Add plugin to gatsby-config.js
 
 ```js
-plugins: ["gatsby-plugin-workerize-loader"];
+plugins: ['gatsby-plugin-workerize-loader']
 ```
 
 Create a worker file with suffix `.worker.js` e.g. `search.worker.js`.
@@ -32,7 +32,7 @@ Create a worker file with suffix `.worker.js` e.g. `search.worker.js`.
 export async function search(searchInput) {
   // expensive search procedure...
 
-  return searchResults;
+  return searchResults
 }
 ```
 
@@ -41,11 +41,11 @@ works in browser environment.
 
 ```js
 // searchWorker.js
-import SearchWorker from "path/to/search.worker.js";
+import SearchWorker from 'path/to/search.worker.js'
 
-const searchWorker = typeof window === "object" && new SearchWorker();
+const searchWorker = typeof window === 'object' && new SearchWorker()
 
-export default searchWorker;
+export default searchWorker
 ```
 
 Use it in your component
@@ -97,15 +97,15 @@ function SearchComponent() {
 
 ```js
 // getSearchWorker.js
-import SearchWorker from "path/to/search.worker.js";
+import SearchWorker from 'path/to/search.worker.js'
 
-let searchWorker;
+let searchWorker
 
 export default function getSearchWorker() {
   if (!searchWorker) {
-    searchWorker = new SearchWorker();
+    searchWorker = new SearchWorker()
   }
-  return searchWorker;
+  return searchWorker
 }
 ```
 
