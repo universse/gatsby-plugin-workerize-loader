@@ -12,7 +12,7 @@ exports.onCreateWebpackConfig = ({
   let options = {}
 
   if (stage === 'build-javascript') {
-    config.optimization.moduleIds = 'hashed'
+    config.optimization.moduleIds = 'total-size'
     options = { name: `${prefix}-[1].[hash:6]`, regExp: '(\\w+).worker.js' }
   }
 
