@@ -9,7 +9,7 @@ const isWorker = file => file.includes(prefix) && file.endsWith('.worker.js')
 const shouldPreload = (file, preloads) =>
   file.startsWith(prefix) && preloads.some(preload => file.includes(preload))
 
-  let preloadScripts = []
+let preloadScripts = []
 
 exports.onRenderBody = ({ setHeadComponents }, { preloads = [] } = {}) => {
   if (!preloads.length) return
@@ -20,7 +20,7 @@ exports.onRenderBody = ({ setHeadComponents }, { preloads = [] } = {}) => {
       .map(file => (
         <link
           key={file}
-          as='javascript'
+          as='worker'
           crossOrigin='anonymous'
           href={`/${file}`}
           rel='preload'
