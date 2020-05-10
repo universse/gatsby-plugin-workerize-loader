@@ -1,6 +1,4 @@
-const { resolve } = require('path')
-
-const { prefix } = require('./constants')
+const { PREFIX } = require('./constants')
 
 exports.onCreateWebpackConfig = ({
   actions: { replaceWebpackConfig },
@@ -13,7 +11,7 @@ exports.onCreateWebpackConfig = ({
 
   if (stage === 'build-javascript') {
     config.optimization.moduleIds = 'total-size'
-    options = { name: `${prefix}-[1].[hash:6]`, regExp: '(\\w+).worker.js' }
+    options = { name: `${PREFIX}-[1].[hash:6]`, regExp: '(\\w+).worker.js$' }
   }
 
   config.module.rules.push({

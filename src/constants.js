@@ -1,5 +1,5 @@
-const prefix = 'built'
+const PREFIX = 'built'
 
 module.exports = {
-  prefix
+  PREFIX
 }
