@@ -1,7 +1,7 @@
 {
   "name": "gatsby-plugin-workerize-loader",
   "author": "Phuoc <phuoc317049@gmail.com>",
-  "version": "1.1.1",
+  "version": "1.2.0-beta.0",
   "description": "Integrate workerize-loader with GatsbyJS",
   "license": "MIT",
   "homepage": "https://github.com/universse/gatsby-plugin-workerize-loader",
@@ -23,13 +23,13 @@
     "gatsby": "^2.0.0"
   },
   "dependencies": {
-    "workerize-loader": "1.1.0"
+    "workerize-loader": "1.2.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.7.0",
     "@babel/core": "^7.7.2",
-    "babel-preset-gatsby-package": "^0.2.11",
-    "cross-env": "^6.0.3"
+    "babel-preset-gatsby-package": "^0.4.2",
+    "cross-env": "^7.0.2"
   },
   "scripts": {
     "build": "babel src --out-dir . --ignore **/__tests__",

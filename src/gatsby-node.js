@@ -3,7 +3,7 @@ const { PREFIX } = require('./constants')
 exports.onCreateWebpackConfig = ({
   actions: { replaceWebpackConfig },
   getConfig,
-  stage
+  stage,
 }) => {
   const config = getConfig()
 
@@ -11,12 +11,15 @@ exports.onCreateWebpackConfig = ({
 
   if (stage === 'build-javascript') {
     config.optimization.moduleIds = 'total-size'
-    options = { name: `${PREFIX}-[1].[hash:6]`, regExp: '(\\w+).worker.js$' }
+    options = {
+      name: `${PREFIX}-[1].[hash:6]`,
+      regExp: '(\\w+).worker.(js|ts)$',
+    }
   }
 
   config.module.rules.push({
-    test: /\.worker\.js$/,
-    use: { loader: 'workerize-loader', options }
+    test: /\.worker\.(js|ts)$/,
+    use: { loader: 'workerize-loader', options },
   })
 
   config.output.globalObject = 'this'
