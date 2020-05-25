@@ -1,7 +1,7 @@
 {
   "name": "gatsby-plugin-workerize-loader",
   "author": "Phuoc <phuoc317049@gmail.com>",
-  "version": "1.2.0-beta.0",
+  "version": "1.2.0",
   "description": "Integrate workerize-loader with GatsbyJS",
   "license": "MIT",
   "homepage": "https://github.com/universse/gatsby-plugin-workerize-loader",
