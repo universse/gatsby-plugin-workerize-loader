@@ -13,12 +13,12 @@ exports.onCreateWebpackConfig = ({
     config.optimization.moduleIds = 'total-size'
     options = {
       name: `${PREFIX}-[1].[hash:6]`,
-      regExp: '(\\w+).worker.(js|ts)$',
+      regExp: '(\\w+).worker.(js|ts|coffee)$',
     }
   }
 
   config.module.rules.push({
-    test: /\.worker\.(js|ts)$/,
+    test: /\.worker\.(js|ts|coffee)$/,
     use: { loader: 'workerize-loader', options },
   })
 
