@@ -10,9 +10,8 @@ exports.onCreateWebpackConfig = ({
   let options = {}
 
   if (stage === 'build-javascript') {
-    config.optimization.moduleIds = 'total-size'
     options = {
-      name: `${PREFIX}-[1].[hash:6]`,
+      name: `${PREFIX}-[1].[contenthash]`,
       regExp: '(\\w+).worker.(js|ts|coffee)$',
     }
   }
@@ -21,8 +20,6 @@ exports.onCreateWebpackConfig = ({
     test: /\.worker\.(js|ts|coffee)$/,
     use: { loader: 'workerize-loader', options },
   })
-
-  config.output.globalObject = 'this'
 
   replaceWebpackConfig(config)
 }

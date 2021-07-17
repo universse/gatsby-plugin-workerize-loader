@@ -13,6 +13,8 @@ let preloadScripts = []
 
 // For some reason, this does not work as expected on Chrome.
 // So for now, I'm not mentioning preloads option in README.
+//
+// Be aware that adding preloads will prevent Gatsby to use the `GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES` flag
 exports.onRenderBody = ({ setHeadComponents }, { preloads = [] } = {}) => {
   if (!preloads.length) return
 
