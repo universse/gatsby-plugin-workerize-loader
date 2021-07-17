@@ -23,7 +23,7 @@
     "gatsby": "^3.0.0"
   },
   "dependencies": {
-    "workerize-loader-wp5": "^2.0.0"
+    "workerize-loader-wp5": "^2.0.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.1",

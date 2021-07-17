@@ -18,7 +18,7 @@ exports.onCreateWebpackConfig = ({
 
   config.module.rules.push({
     test: /\.worker\.(js|ts|coffee)$/,
-    use: { loader: 'workerize-loader', options },
+    use: { loader: 'workerize-loader-wp5', options },
   })
 
   replaceWebpackConfig(config)
