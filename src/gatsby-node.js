@@ -10,19 +10,16 @@ exports.onCreateWebpackConfig = ({
   let options = {}
 
   if (stage === 'build-javascript') {
-    config.optimization.moduleIds = 'total-size'
     options = {
-      name: `${PREFIX}-[1].[hash:6]`,
+      name: `${PREFIX}-[1].[contenthash]`,
       regExp: '(\\w+).worker.(js|ts|coffee)$',
     }
   }
 
   config.module.rules.push({
     test: /\.worker\.(js|ts|coffee)$/,
-    use: { loader: 'workerize-loader', options },
+    use: { loader: 'workerize-loader-wp5', options },
   })
-
-  config.output.globalObject = 'this'
 
   replaceWebpackConfig(config)
 }
