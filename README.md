@@ -5,6 +5,8 @@ via [workerize-loader](https://github.com/developit/workerize-loader).
 
 ## Install
 
+Latest 2.0.0 version is compatible with Gatsby 3 and Webpack 5.
+
 With Yarn:
 
 ```bash
@@ -15,6 +17,18 @@ Or with npm:
 
 ```bash
 npm install --save-dev gatsby-plugin-workerize-loader
+```
+
+For Gatsby 2, please use version 1.5.0.
+
+```bash
+yarn add gatsby-plugin-workerize-loader@1.5.0 -D
+```
+
+Or with npm:
+
+```bash
+npm install --save-dev gatsby-plugin-workerize-loader@1.5.0
 ```
 
 ## Usage
