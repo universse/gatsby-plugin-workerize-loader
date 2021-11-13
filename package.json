@@ -1,7 +1,7 @@
 {
   "name": "gatsby-plugin-workerize-loader",
   "author": "Phuoc <phuoc317049@gmail.com>",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Integrate workerize-loader with GatsbyJS",
   "license": "MIT",
   "homepage": "https://github.com/universse/gatsby-plugin-workerize-loader",
@@ -20,16 +20,16 @@
     "webpack"
   ],
   "peerDependencies": {
-    "gatsby": "^3.0.0"
+    "gatsby": "^3.0.0 || ^4.0.0"
   },
   "dependencies": {
     "workerize-loader-wp5": "^2.0.2"
   },
   "devDependencies": {
-    "@babel/cli": "^7.10.1",
-    "@babel/core": "^7.10.2",
-    "babel-preset-gatsby-package": "^0.4.4",
-    "cross-env": "^7.0.2"
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "babel-preset-gatsby-package": "^2.1.0",
+    "cross-env": "^7.0.3"
   },
   "scripts": {
     "build": "babel src --out-dir . --ignore **/__tests__",
